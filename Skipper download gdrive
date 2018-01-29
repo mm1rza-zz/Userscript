@@ -1,9 +1,10 @@
 // ==UserScript==
-// @name        Skipper for file.idfl.me
-// @namespace   Skipper for file.idfl.me
-// @description Presse automatically on "Confim" button
+// @name        Skipper download gdrive
+// @namespace   Skipper download gdrive
+// @description Presse automatically on "download" button
 // @include     http://file.idfl.me/*
 // @include     http://enthus1ast.com/file/*
+// @include     http://easytodownload.xyz/*
 // @version     1
 // ==/UserScript==
 
