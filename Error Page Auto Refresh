@@ -1,0 +1,63 @@
+// ==UserScript==
+// @name           Error Page Auto Refresh
+// @description    Refresh on failed page loading & Gateway problems
+// @author         feiruo&hsyh
+// @Mod            Dupont整理
+// @version        2016.11.09
+// @grant          none
+// @namespace      http://userscripts.org/scripts/show/112519
+// namespace      https://greasyfork.org/zh-CN/users/363
+// ==/UserScript==
+
+var time = 3*1000; //单位以毫秒计
+
+(function () 
+{
+//from: hsyh 2014.09.25
+if (document.getElementsByTagName('div') [0].getAttribute('id') == 'errorPageContainer')
+{
+//setTimeout(f: fn(), ms: number) -> number
+setTimeout(function () {
+window.location.reload(true);
+}, time);
+} 
+
+//感谢feiruo
+if (/^(about:neterror)/.test(document.URL))
+{setTimeout(function() {window.location.reload(true);}, time);}
+
+//原脚本
+if (document.title == '502 Bad Gateway' )
+		{setTimeout(function() {window.location.reload(true);}, time);}
+	else if (document.title == '504' )
+		{setTimeout(function() {window.location.reload(true);}, time);}
+	else if (document.title == 'Problem loading page' )
+		{setTimeout(function() {window.location.reload(true);}, time);}
+	else if (document.title == 'Gateway Timeout' )
+		{setTimeout(function() {window.location.reload(true);}, time);}
+	else if (document.title == 'Service Unavailable' )
+		{setTimeout(function() {window.location.reload(true);}, time);}
+	else if (document.title == '500 Internal Server Error' )
+		{setTimeout(function() {window.location.reload(true);}, time);}
+	else if (document.title == 'Database error' )
+		{setTimeout(function() {window.location.reload(true);}, time);}
+	else if (document.title == 'FastCGI Error' )
+		{setTimeout(function() {window.location.reload(true);}, time);}
+	else if (document.title == 'The connection has timed out' )
+		{setTimeout(function() {window.location.reload(true);}, time);}
+	else if (document.title == 'Problemas al cargar la página' )
+		{setTimeout(function() {window.location.reload(true);}, time);}
+	else if (document.title == 'Error 502 (Server Error)!!1' )
+		{setTimeout(function() {window.location.reload(true);}, time);}
+	else if (document.getElementsByTagName('h1')[0].innerHTML == '502 Bad Gateway')
+		{setTimeout(function() {window.location.reload(true);}, time);}
+	else if (document.getElementsByTagName('h1')[0].innerHTML == 'Service Unavailable')
+		{setTimeout(function() {window.location.reload(true);}, time);}
+	else if (document.getElementsByTagName('h1')[0].innerHTML == '504')
+		{setTimeout(function() {window.location.reload(true);}, time);}
+	else if (document.getElementsByTagName('h1')[0].innerHTML == 'Gateway Timeout')
+		{setTimeout(function() {window.location.reload(true);}, time);}
+	else if (document.getElementsByTagName('h1')[0].innerHTML == '504 Gateway Time-out')
+		{setTimeout(function() {window.location.reload(true);}, time);}
+
+})();
